@@ -9,29 +9,29 @@ This repository showcases the **deployment architecture and infrastructure setup
 The design prioritizes scalability, low latency, and minimal operational overhead using a fully managed cloud-native approach.
 
 
-## 🌐 Architecture Overview
+## Architecture Overview
 
 The architecture consists of the following components:
 
-### 🖥️ Frontend – S3 + CloudFront  
+### Frontend – S3 + CloudFront  
 - A **static web application** hosted in **Amazon S3**.  
 - Distributed globally through **Amazon CloudFront** for high performance, caching, and SSL-secured access.
 
-### 🧭 API Gateway  
+###  API Gateway  
 - Serves as the **entry point** for all client requests.  
 - Manages routing, authentication, and rate-limiting to backend services.
 
-### ⚙️ AWS Lambda – Business Logic Layer  
+### AWS Lambda – Business Logic Layer  
 - Contains the **core logic** for handling chat interactions.  
 - Processes user input, integrates with both **OpenAI** and **Bedrock** models, and manages responses.  
 - Implements lightweight orchestration and memory handling.
 
-### 🧠 LLM Engines – Bedrock & OpenAI  
+### LLM Engines – Bedrock & OpenAI  
 - **Amazon Bedrock**: Provides access to foundational models for enterprise-grade AI.  
 - **OpenAI LLM (e.g., GPT-4)**: Enhances conversational capabilities with advanced natural-language understanding and reasoning.  
 - Lambda dynamically routes requests to the most appropriate model based on context or configuration.
 
-### 💾 S3 Storage – Memory Layer  
+### S3 Storage – Memory Layer  
 - Stores **conversation history** and session metadata for persistence.  
 - Enables contextual continuity across chat sessions.
 
