@@ -14,7 +14,7 @@ The design prioritizes scalability, low latency, and minimal operational overhea
 The architecture consists of the following components:
 
 ### Frontend – S3 + CloudFront  
-- A **static web application** hosted in **Amazon S3**.  
+- A **static web application** hosted in **Amazon S3** 
 - Distributed globally through **Amazon CloudFront** for high performance, caching, and SSL-secured access.
 
 ###  API Gateway  
